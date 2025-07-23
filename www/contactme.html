@@ -1,0 +1,174 @@
+<!DOCTYPE html> <!-- Mendeklarasikan bahwa dokumen ini adalah HTML5 -->
+<html lang="en"> <!-- Bahasa halaman ini adalah Inggris -->
+<head>
+  <meta charset="UTF-8" /> <!-- Menentukan encoding karakter UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Membuat halaman responsif -->
+  <title>Contact</title> <!-- Judul halaman di tab browser -->
+
+  <!-- Font Awesome untuk ikon sosial media -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* Mengimpor font dari Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;600&display=swap');
+
+    /* Variabel CSS untuk warna dan layout */
+    :root {
+      --primary-color: #4f46e5;
+      --secondary-color: #6366f1;
+      --bg-color: #f0f4ff;
+      --text-color: #1f2937;
+      --accent-color: #ef4444;
+      --border-radius: 10px;
+      --max-width: 1200px;
+    }
+
+    * {
+      box-sizing: border-box; /* Menyederhanakan penghitungan ukuran elemen */
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif; /* Font utama */
+      background-color: var(--bg-color); /* Warna latar belakang */
+      color: var(--text-color); /* Warna teks */
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #fff; /* Warna putih untuk header */
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Bayangan bawah */
+      position: sticky; /* Agar tetap di atas saat discroll */
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between; /* Logo kiri, menu kanan */
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-color); /* Warna ungu utama */
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      user-select: none;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--primary-color); /* Warna berubah saat hover */
+    }
+
+    main {
+      padding: 3rem 1rem 5rem;
+      min-height: 80vh;
+    }
+
+    section {
+      max-width: var(--max-width);
+      margin: 3rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    h2.section-title {
+      color: var(--primary-color);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-icons {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem; /* Jarak antar ikon */
+    }
+
+    .social-icons a {
+      color: var(--primary-color); /* Warna ikon default */
+      font-size: 1.8rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: var(--accent-color); /* Warna saat hover: merah */
+    }
+
+    footer {
+      background-color: #1f2937; /* Warna gelap */
+      color: #f9fafb; /* Teks putih */
+      text-align: center;
+      padding: 1.3rem 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header/Navigasi -->
+  <header>
+    <div class="container">
+      <nav aria-label="Primary navigation"> <!-- Untuk aksesibilitas -->
+        <div class="logo">Fadyl</div> <!-- Logo/Nama -->
+        <ul>
+          <li><a href="index.php">Home</a></li> <!-- Link ke halaman utama -->
+          <li><a href="tugas.html">tugas</a></li> <!-- Link ke halaman tugas -->
+          <li><a href="about-me.html">About Me</a></li> <!-- Link ke halaman tentang saya -->
+          <li><a href="php">Data Siswa</a></li> <!-- Link ke data siswa (kemungkinan folder PHP) -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Konten Utama -->
+  <main>
+    <section id="contact" aria-label="Contact"> <!-- Section untuk kontak -->
+      <div class="contact-text">
+        <h2 class="section-title">Contact</h2> <!-- Judul bagian kontak -->
+
+        <!-- Ikon Sosial Media -->
+        <div class="social-icons">
+          <a href="https://facebook.com/Muhammad Fadyel Daroini" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://wa.me/6282331647040" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://instagram.com/om_snorlax" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <!-- (Kosong - bisa diisi email, form kontak, dll) -->
+        <a href=""></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; fadyl .web designer handal. <!-- Keterangan di bawah halaman -->
+  </footer>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata dasar untuk karakter dan responsivitas -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+
+  <style>
+    /* Mengimpor font dari Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;600&display=swap');
+
+    /* Variabel CSS untuk warna dan ukuran */
+    :root {
+      --primary-color: #4f46e5;
+      --secondary-color: #6366f1;
+      --bg-color: #f0f4ff;
+      --text-color: #1f2937;
+      --accent-color: #ef4444;
+      --border-radius: 10px;
+      --max-width: 1200px;
+    }
+
+    /* Reset box sizing untuk semua elemen */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Gaya dasar untuk body */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    /* Header tetap di atas saat scroll */
+    header {
+      background-color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    /* Container untuk membatasi lebar konten */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Navigasi */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Logo */
+    .logo {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      user-select: none;
+    }
+
+    /* Menu navigasi */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--primary-color);
+    }
+
+    /* Konten utama */
+    main {
+      padding: 3rem 1rem 5rem;
+      min-height: 80vh;
+    }
+
+    /* Setiap section */
+    section {
+      max-width: var(--max-width);
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Layout about section */
+    #about {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      text-align: left;
+      flex: 1;
+    }
+
+    .about-image {
+      flex: 0 0 40%;
+      text-align: right;
+    }
+
+    /* Judul section */
+    h2.section-title {
+      color: var(--primary-color);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    /* Gaya skill */
+    #skills .skill {
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-name {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .progress-bar {
+      background-color: #e0e0e0;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      height: 20px;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .progress {
+      background-color: var(--primary-color);
+      height: 100%;
+      transition: width 0.5s ease;
+    }
+
+    /* Hobi dalam kolom vertikal */
+    #hobbies {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .hobby {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hobby-image {
+      margin-bottom: 1rem;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .hobby-description {
+      max-width: 600px;
+    }
+
+    .hobby-description h3 {
+      margin: 0 0 0.5rem;
+    }
+
+    /* Responsif untuk about section */
+    @media (max-width: 768px) {
+      #about {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-image {
+        text-align: center;
+      }
+    }
+
+    /* Footer di bawah halaman */
+    footer {
+      background-color: #1f2937;
+      color: #f9fafb;
+      text-align: center;
+      padding: 1.3rem 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <nav aria-label="Primary navigation">
+        <div class="logo">Fadyl</div>
+        <ul>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="tugas.html">Tugas</a></li>
+          <li><a href="php">Data Siswa</a></li>
+          <li><a href="contactme.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- KONTEN UTAMA -->
+  <main>
+
+    <!-- Section: About Me -->
+    <section id="about" aria-label="About Me">
+      <div class="about-text">
+        <h2 class="section-title">About Me</h2>
+        <p>Perkenalkan nama saya Muhammad Fadyel Daroini, lahir di Kota Kediri, Jawa Timur pada tahun 2007. Saya saat ini berumur 18 tahun dan bersekolah di SMKN 1 Kota Kediri.</p>
+      </div>
+      <div class="about-image">
+        <img src="lah.jpg" alt="Foto Fadyel" style="max-width: 50%; border-radius: var(--border-radius);">
+      </div>
+    </section>
+
+    <!-- Section: Skills -->
+    <section id="skills" aria-label="My Skills">
+      <h2 class="section-title">My Skills</h2>
+
+
+      <div class="skill">
+        <div class="skill-name">AI</div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 90%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">HTML/CSS</div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 75%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">Study</div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 70%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-name">Sleep</div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 100%;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Hobbies -->
+    <section id="hobbies" aria-label="My Hobbies">
+      <h2 class="section-title">My Hobbies</h2>
+
+      <div class="hobby">
+        <div class="hobby-image">
+          <img src="unc.jpg" alt="Basketball" style="width: 100%; border-radius: var(--border-radius);">
+        </div>
+        <div class="hobby-description">
+          <h3>Basketball</h3>
+          <p>lebih menyukai menonton basket seaslinya namun sering juga bermain basket (kalo temen libur kuliah)</p>
+        </div>
+      </div>
+
+      <div class="hobby">
+        <div class="hobby-image">
+          <img src="buku.jpg" alt="Reading Books" style="width: 100%; border-radius: var(--border-radius);">
+        </div>
+        <div class="hobby-description">
+          <h3>Reading Books</h3>
+          <p>akhir-akhir ini suka membaca buat ngurangin doomscrolling (dompet taruhannya)</p>
+        </div>
+      </div>
+
+      <div class="hobby">
+        <div class="hobby-image">
+          <img src="iwak.webp" alt="Cycling" style="width: 100%; border-radius: var(--border-radius);">
+        </div>
+        <div class="hobby-description">
+          <h3>Cycling</h3>
+          <p>cardio saat ini (malas lari jir)</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <!-- Keterangan bawah halaman -->
+    &copy; fadyl .web designer handal
+  </footer>
+
+</body>
+</html>
